@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#17DDCD"
+    tools:context=".Dino">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="332dp"
+        android:layout_height="196dp"
+        android:layout_marginTop="20dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        android:onClick="selectImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/add" />
+
+    <EditText
+        android:id="@+id/nameText"
+        android:layout_width="332dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFE024"
+        android:hint="Enter a dino name"
+        android:textColor="#3F51B5"
+        android:textColorHint="#3F51B5"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/categoryText"
+        android:layout_width="332dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFE024"
+        android:hint="Enter a category"
+        android:textColor="#3F51B5"
+        android:textColorHint="#3F51B5"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameText" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="332dp"
+        android:layout_height="177dp"
+        android:layout_marginTop="20dp"
+        android:background="#FFE024"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/categoryText">
+
+        <EditText
+            android:id="@+id/descriptionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#FFE024"
+            android:hint="Enter a description"
+            android:textColor="#3F51B5"
+            android:textColorHint="#3F51B5"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/categoryText" />
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="332dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView">
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="121dp"
+            android:layout_height="59dp"
+            android:onClick="back"
+            android:text="Back"
+            android:textSize="24sp"
+            android:layout_marginLeft="35dp"/>
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="121dp"
+            android:layout_height="59dp"
+            android:onClick="save"
+            android:text="Save"
+            android:textSize="24sp"
+            android:layout_marginLeft="20dp"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
